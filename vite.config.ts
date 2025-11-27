@@ -34,7 +34,7 @@ function writeRss(): Plugin {
 			description: content.description,
 			categories: content.categories,
 			date: content.date,
-			slug: content.slug,
+			slug: content.slug ?? path.parse(file).name,
 			edited: content.edited,
 			published: content.published
 		};
